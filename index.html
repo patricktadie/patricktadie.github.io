@@ -5,20 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Patrick</title>
 </head>
 <body>
+    
     <div class="root">
+        <input type="checkbox" id="side">
         <div class="side">
-            <div>
-                <img src="https://i.ibb.co/YT7C37b0/v617batch2-bb-02-technology.jpg">
-                <span>Patrick Tadie</span>
-                <span>IT Support analyst</span>
-            </div>
+            <button onclick="document.querySelector('#side').checked=false"><i class="fa-solid fa-xmark"></i></button>
+            <span>Patrick Tadie</span>
+            <span>IT Support analyst</span>
             <div>
                 <a href="">Home</a>
                 <a href="">About</a>
                 <a href="">Education</a>
+                <a href="">Experience</a>
                 <a href="">Skills</a>
                 <a href="">Blog</a>
                 <a href="">Contact</a>
@@ -26,8 +28,7 @@
         </div>
         <div class="main">
             <div class="header">
-                <i class="fa-solid fa-bars"></i>
-                <i class="fa-solid fa-xmark"></i>
+                <button onclick="document.querySelector('#side').checked=true"><i class="fa-solid fa-bars"></i></button>
             </div>
             <div class="home">
                 <div>
@@ -35,13 +36,13 @@
                     <span>I'm Patrick Tadie</span>
                     <span>IT Support Analyst</span>
                 </div>
+                <p>
+                    Currently, I’m building projects to sharpen my skills and exploring opportunities where I can contribute to a dynamic IT team. When I’m not working on tech, you can find me biking, gaming, or digging into tech forums.
+                </p>
                 <div>
                     <button>Download CV</button>
                     <button>Contact Me</button>
                 </div>
-                <p>
-                    Currently, I’m building projects to sharpen my skills and exploring opportunities where I can contribute to a dynamic IT team. When I’m not working on tech, you can find me biking, gaming, or digging into tech forums.
-                </p>
             </div>
             <div class="about">
                 <span>About</span>
@@ -59,11 +60,78 @@
             </div>
             <div class="education">
                 <span>Education</span>
-                <div></div>
+                <div class="accordion">
+                    <div>
+                        <span>Bachelor degree in Computing Technology</span>
+                        <p>
+                            A multidisciplinary degree focused on the practical and theoretical aspects of computer systems, software development, networking, and IT infrastructure. Covered topics such as programming, database systems, cybersecurity, cloud computing, and system administration. Be able to design, implement, and manage modern technology solutions in real-world environments.
+                        </p>
+                    </div>
+                    <div>
+                        <span>Bachelor degree in Electrical Engineering</span>
+                        <p>
+                            A four-year degree focused on the study and application of electricity, electronics, and electromagnetism. Covered core topics such as circuit analysis, digital systems, signal processing, control systems, and power electronics. Emphasized both theoretical foundations and practical skills, including hands-on lab work and engineering problem-solving.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="experience">
+                <span>Experience</span>
+                <div>
+                    <div>
+                        <span>Internship</span>
+                        <span>Nokia 2020-2020</span>
+                    </div>
+                    <div>
+                        <span>User Support Technician</span>
+                        <span>CPOS Inc 2023-Now</span>
+                    </div>
+                </div>
             </div>
             <div class="skills">
                 <span>Skills</span>
-                <div></div>
+                <div class="slider">
+                    <div>
+                        <div>
+                            <span>Hardware Troubleshooting</span>
+                            <p>desktops, laptops, printers, peripherals</p>
+                        </div>
+                        <div>
+                            <span>Software Support</span>
+                            <p>Windows, macOS, Microsoft Office, browsers</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <span>Operating Systems</span>
+                            <p>Windows 10/11, macOS, Linux basics</p>
+                        </div>
+                        <div>
+                            <span>Active Directory</span>
+                            <p>user account management, password resets, group policy basics</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <span>Networking Fundamentals</span>
+                            <p>IP addressing, DNS, DHCP, VPN setup</p>
+                        </div>
+                        <div>
+                            <span>Remote Support Tools</span>
+                            <p>TeamViewer, AnyDesk, Remote Desktop, Zoom</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <span>Office 365 / Microsoft 365</span>
+                            <p>Exchange, OneDrive, Teams, Outlook</p>
+                        </div>
+                        <div>
+                            <span>Basic Scripting</span>
+                            <p>PowerShell, Bash, batch files for automation</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="blog">
                 <span>Recent Blog</span>
@@ -84,12 +152,19 @@
                         <i class="fa-brands fa-linkedin-in"></i>
                         <a href="https://linkedin.com/patrick-tadie">Linked In</a>
                     </div>
-                    <div></div>
+                    <div>
+                        <input placeholder="Name" type="text">
+                        <input placeholder="Email" type="text">
+                        <input placeholder="Subject" type="text">
+                        <textarea placeholder="Message"></textarea>
+                        <button>Send Message</button>
+                    </div>
                 </div>
             </div>
+            <div class="transparent" onclick="document.querySelector('#side').checked=false"></div>
         </div>
     </div>
-    <script src="./static/js/main.js"></script>
+    <script type="module" src="./static/js/main.js"></script>
 </body>
 </html>
 
