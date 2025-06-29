@@ -1,201 +1,88 @@
 
 
+
+
 :root{
-
-
+    --deep-sky-blue: rgba(72, 190, 255, 1);
+    --aqua: rgba(61, 250, 255, 1);
+    --mint: rgba(67, 197, 158, 1);
+    --myrtle-green: rgba(61, 112, 104, 1);
+    --brunswick-green: rgba(20, 69, 61, 1);
 }
+
 
 *{
-    margin:0;
     padding:0;
+    margin:0;
 }
 
 
-
-/* ---------------body--------------- */
-body{
-    overflow-x:hidden;
-}
-
-/* ---------------root--------------- */
 .root{
     width:100%;
+    min-height:100vh;
     display:grid;
-    grid-template-columns:auto 250px minmax(300px, 500px) auto;
+    grid-template-columns:auto 250px minmax(300px, 700px) auto;
     transition:transform 1s;
 }
 
-.root > input{
-    display:none;
-}
-
-
-/* ---------------transparent--------------- */
-.transparent{
-    width:100%;
-    height:100%;
-    position:absolute;
-    top:0;
-    left:0;
-    display:none;
-    background-color:black;
-    opacity:0.7;
-}
-
-/* ---------------side--------------- */
 .side{
     grid-column:2/3;
-    display:flex;
-    flex-direction:column;
-    gap:20px;
     position:sticky;
     top:0;
     height:100vh;
+    /* padding:10px; */
+    box-sizing:border-box;
 }
 
-.side > :first-child{
+.close-side, .open-side{
     display:none;
+    cursor:pointer;
 }
 
-.side > :last-child{
-    display:flex;
-    flex-direction:column;
-    gap:5px;
-}
-
-
-/* ---------------main--------------- */
-.main{
-    grid-column:3/4;
-    display:flex;
-    flex-direction:column;
-    gap:25px;
-    padding:10px;
-    position:relative;
-}
-
-/* ---------------header--------------- */
-.header{
-    display:none;
-    position:sticky;
+.main-transparent{
+    position:absolute;
     top:0;
-    height:50px;
-    justify-content:end;
-    /* background-color:grey; */
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.5);
+    display:none;
+}
+
+.main{
+    position:relative;
+    grid-column:3/4;
 }
 
 
-/* ---------------home--------------- */
-.home{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    grid-template-rows:1fr 1fr;
+
+body[mobile] .root{
+    width:calc(100% + 250px);
+    grid-template-columns:250px calc(100% - 250px);
+    transform:translateX(-250px);
 }
 
-.home > :first-child{
+body[mobile] .side{
     grid-column:1/2;
-    grid-row:1/2;
-    display:flex;
-    flex-direction:column;
-    gap:10px;
 }
 
-.home > :nth-child(2){
+body[mobile] .main{
     grid-column:2/3;
-    grid-row:1/-1;
-    line-height:1.6;
-    text-align:justify;
 }
 
-.home > :last-child{
-    grid-column:1/2;
-    grid-row:2/3;
-    align-self:end;
+body[mobile] .close-side, body[mobile] .open-side{
+    display:initial;
 }
 
-/* ---------------about--------------- */
-.about{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
+body[mobile][side]{
+    overflow:hidden;
 }
 
-.about div{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
+body[mobile][side] .root{
+    transform:translateX(0);
 }
 
-.about p{
-    line-height:1.6;
-    text-align:justify;
+body[mobile][side] .main-transparent{
+    display:initial;
 }
 
-
-
-
-
-
-
-
-
-@media(max-width:750px){
-
-    /* ---------------home--------------- */
-    .home{
-        display:flex;
-        flex-direction:column;
-        gap:15px;
-    }
-
-    .home > :last-child{
-        align-self:start;
-    }
-
-    /* ---------------body--------------- */
-    body:has(.root > input:checked){
-        overflow-y:hidden;
-    }
-
-    /* ---------------root--------------- */
-    .root{
-        transform:translate(-250px,0);
-        width:calc(100% + 250px);
-        grid-template-columns:250px minmax(300px, auto);
-    }
-
-    .root:has(> input:checked){
-        transform:translate(0,0);
-    }
-
-    .root:has(> input:checked) .transparent{
-        display:initial;
-    }
-
-    /* ---------------side--------------- */
-    .side{
-        grid-column:1/2;
-    }
-
-    .side > :first-child{
-        display:initial;
-    }
-
-    /* ---------------main--------------- */
-    .main{
-        grid-column:2/3;
-    }
-
-    /* ---------------header--------------- */
-    .header{
-        display:flex;
-    }
-
-
-
-
-
-
-
-}
 

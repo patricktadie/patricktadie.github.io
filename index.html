@@ -9,11 +9,9 @@
     <title>Patrick</title>
 </head>
 <body>
-    
     <div class="root">
-        <input type="checkbox" id="side">
         <div class="side">
-            <button onclick="document.querySelector('#side').checked=false"><i class="fa-solid fa-xmark"></i></button>
+            <button class="close-side"><i class="fa-solid fa-xmark"></i></button>
             <span>Patrick Tadie</span>
             <span>IT Support analyst</span>
             <div>
@@ -27,9 +25,7 @@
             </div>
         </div>
         <div class="main">
-            <div class="header">
-                <button onclick="document.querySelector('#side').checked=true"><i class="fa-solid fa-bars"></i></button>
-            </div>
+            <button class="open-side"><i class="fa-solid fa-bars"></i></button>
             <div class="home">
                 <div>
                     <span>Hi !</span>
@@ -61,15 +57,15 @@
             <div class="education">
                 <span>Education</span>
                 <div class="accordion">
-                    <div>
-                        <span>Bachelor degree in Computing Technology</span>
-                        <p>
+                    <div  class="accordion-item">
+                        <button class="accordion-item-title">Bachelor degree in Computing Technology</button>
+                        <p class="accordion-item-content">
                             A multidisciplinary degree focused on the practical and theoretical aspects of computer systems, software development, networking, and IT infrastructure. Covered topics such as programming, database systems, cybersecurity, cloud computing, and system administration. Be able to design, implement, and manage modern technology solutions in real-world environments.
                         </p>
                     </div>
-                    <div>
-                        <span>Bachelor degree in Electrical Engineering</span>
-                        <p>
+                    <div class="accordion-item">
+                        <button class="accordion-item-title">Bachelor degree in Electrical Engineering</button>
+                        <p class="accordion-item-content">
                             A four-year degree focused on the study and application of electricity, electronics, and electromagnetism. Covered core topics such as circuit analysis, digital systems, signal processing, control systems, and power electronics. Emphasized both theoretical foundations and practical skills, including hands-on lab work and engineering problem-solving.
                         </p>
                     </div>
@@ -90,52 +86,65 @@
             </div>
             <div class="skills">
                 <span>Skills</span>
-                <div class="slider">
-                    <div>
-                        <div>
-                            <span>Hardware Troubleshooting</span>
-                            <p>desktops, laptops, printers, peripherals</p>
+                <div class="carousel">
+                    <div class="slider">
+                        <div class="slide">
+                            <div>
+                                <span>Hardware Troubleshooting</span>
+                                <p>desktops, laptops, printers, peripherals</p>
+                            </div>
+                            <div>
+                                <span>Software Support</span>
+                                <p>Windows, macOS, Microsoft Office, browsers</p>
+                            </div>
                         </div>
-                        <div>
-                            <span>Software Support</span>
-                            <p>Windows, macOS, Microsoft Office, browsers</p>
+                        <div class="slide">
+                            <div>
+                                <span>Operating Systems</span>
+                                <p>Windows 10/11, macOS, Linux basics</p>
+                            </div>
+                            <div>
+                                <span>Active Directory</span>
+                                <p>user account management, password resets, group policy basics</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div>
+                                <span>Networking Fundamentals</span>
+                                <p>IP addressing, DNS, DHCP, VPN setup</p>
+                            </div>
+                            <div>
+                                <span>Remote Support Tools</span>
+                                <p>TeamViewer, AnyDesk, Remote Desktop, Zoom</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div>
+                                <span>Office 365 / Microsoft 365</span>
+                                <p>Exchange, OneDrive, Teams, Outlook</p>
+                            </div>
+                            <div>
+                                <span>Basic Scripting</span>
+                                <p>PowerShell, Bash, batch files for automation</p>
+                            </div>
                         </div>
                     </div>
-                    <div>
-                        <div>
-                            <span>Operating Systems</span>
-                            <p>Windows 10/11, macOS, Linux basics</p>
-                        </div>
-                        <div>
-                            <span>Active Directory</span>
-                            <p>user account management, password resets, group policy basics</p>
-                        </div>
+                    <div class="indicator">
+                        <button class="indicator-led"></button>
+                        <button class="indicator-led"></button>
+                        <button class="indicator-led"></button>
+                        <button class="indicator-led"></button>
                     </div>
-                    <div>
-                        <div>
-                            <span>Networking Fundamentals</span>
-                            <p>IP addressing, DNS, DHCP, VPN setup</p>
-                        </div>
-                        <div>
-                            <span>Remote Support Tools</span>
-                            <p>TeamViewer, AnyDesk, Remote Desktop, Zoom</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <span>Office 365 / Microsoft 365</span>
-                            <p>Exchange, OneDrive, Teams, Outlook</p>
-                        </div>
-                        <div>
-                            <span>Basic Scripting</span>
-                            <p>PowerShell, Bash, batch files for automation</p>
-                        </div>
-                    </div>
+                    <button class="next"></button>
+                    <button class="prev"></button>
                 </div>
             </div>
             <div class="blog">
                 <span>Recent Blog</span>
-                <div></div>
+                <div class="expand-box">
+                    <div class="content"></div>
+                    <button class="control"></button>
+                </div>
             </div>
             <div class="contact">
                 <span>Contact</span>
@@ -161,7 +170,10 @@
                     </div>
                 </div>
             </div>
-            <div class="transparent" onclick="document.querySelector('#side').checked=false"></div>
+            <div class="main-transparent"></div>
+        </div>
+        <div class="root-transparent">
+            <div class="post"></div>
         </div>
     </div>
     <script type="module" src="./static/js/main.js"></script>
