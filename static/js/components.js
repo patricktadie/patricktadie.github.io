@@ -124,14 +124,9 @@ function scrollToSection(list){
 
 
 
-function expandBox(){
 
 
-}
-
-
-
-export {accordion, carousel, sectionTracker, scrollToSection, expandBox}
+export {accordion, carousel, sectionTracker, scrollToSection}
 
 
 

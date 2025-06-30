@@ -3,29 +3,29 @@
 
 [
     {
-        "title":"",
-        "date":"",
-        "content":""
+        "title":"What Is DNS and Why Does It Matter ?",
+        "date":"January 03, 2025",
+        "content":"dns.html"
     },
     {
-        "title":"",
-        "date":"",
-        "content":""
+        "title":"Understanding IP Addresses, Subnets, and Gateways",
+        "date":"February 11, 2025",
+        "content":"network_basics.html"
     },
     {
-        "title":"",
-        "date":"",
-        "content":""
+        "title":"The Difference Between a Router, Switch, and Hub",
+        "date":"September 05, 2024",
+        "content":"network_devices.html"
     },
     {
-        "title":"",
-        "date":"",
-        "content":""
+        "title":"How DHCP Works: Explained Simply",
+        "date":"March 10, 2025",
+        "content":"dhcp.html"
     },
     {
-        "title":"",
-        "date":"",
-        "content":""
+        "title":"Introduction to PowerShell for IT Support",
+        "date":"March 25, 2025",
+        "content":"powershell_basic.html"
     }
 ]
 
