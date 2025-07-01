@@ -1,22 +1,9 @@
 
 
-function accordion(){
-    document.querySelectorAll(".accordion").forEach(accordion => {
-        accordion.addEventListener("click", (e)=>{
-            accordion.querySelectorAll(".accordion-item-title").forEach(title =>{
-                if(title == e.target && !title.parentNode.hasAttribute("open")) title.parentNode.setAttribute("open", "")
-                else if(title.parentNode.hasAttribute("open")) item.removeAttribute("open")
-            })
-        })
-
-    })
-}
 
 
-
-
-function carousel(){
-    document.querySelectorAll(".carousel").forEach(carousel => {
+function carousel(carousel){
+    // document.querySelectorAll(".carousel").forEach(carousel => {
         let currentPos = 0
         carousel.querySelector(".indicator-led").setAttribute("active","")
         carousel.setAttribute("transition", "")
@@ -84,49 +71,14 @@ function carousel(){
                 })
             }
         })
-    })
-}
-
-
-function sectionTracker(list){
-    const max = 20  //this require each section to be at least 20px height
-    let current = null //initialize current section
-    document.addEventListener("scroll", ()=>{
-
-        //semaphore
-
-        if(current) current.tracker.removeAttribute("current")
-        list.forEach(item => {
-            if(item.section.getBoundingClientRect().top <= max){
-                if(!current) current = item
-                else if(current.section.getBoundingClientRect().top < item.section.getBoundingClientRect().top) current = item
-            }
-        })
-        current.tracker.setAttribute("current", "")
-    })
-}
-
-
-
-function scrollToSection(list){
-    let current = null
-    list.forEach(item => {
-        item.tracker.addEventListener("click", ()=>{
-            if(current) current.tracker.removeAttribute("current")
-            current=item 
-            const top = current.section.getBoundingClientRect().top
-            if(top > 0) window.scrollTo(0, top+window.scrollY, {behavior: "smooth"})
-            else if(top < 0) window.scrollTo(0, -top+window.scrollY, {behavior: "smooth"})
-            current.tracker.setAttribute("current", "")
-        })
-    })
+    // })
 }
 
 
 
 
 
-export {accordion, carousel, sectionTracker, scrollToSection}
+export { carousel }
 
 
 
