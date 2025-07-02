@@ -11,16 +11,28 @@
 }
 
 
+/* general style */
 *{
     padding:0;
     margin:0;
 }
 
+
+/* body */
 body{
     overflow-x:hidden;
 }
 
+body:has(.root-transparent[show]){
+    overflow-y:hidden;
+}
 
+body[mobile][side]{
+    overflow-y:hidden;
+}
+
+
+/* root */
 .root{
     width:100%;
     min-height:100vh;
@@ -30,6 +42,29 @@ body{
     position:relative;
 }
 
+body[mobile] .root{
+    width:calc(100% + 250px);
+    grid-template-columns:250px calc(100% - 250px);
+    transform:translateX(-250px);
+}
+
+body[mobile][side] .root{
+    transform:translateX(0);
+}
+
+
+/* main */
+.main{
+    grid-column:3/4;
+}
+
+body[mobile] .main{
+    grid-column:2/3;
+    position:relative;
+}
+
+
+/* side */
 .side{
     grid-column:2/3;
     position:sticky;
@@ -37,6 +72,14 @@ body{
     height:100vh;
     /* box-sizing:border-box; */
 }
+
+body[mobile] .side{
+    grid-column:1/2;
+}
+
+
+
+
 
 .close-side, .open-side{
     display:none;
@@ -63,49 +106,74 @@ body{
     box-sizing:border-box;
 }
 
-.main{
-    grid-column:3/4;
-}
 
 
 
-body[mobile] .root{
-    width:calc(100% + 250px);
-    grid-template-columns:250px calc(100% - 250px);
-    transform:translateX(-250px);
-}
 
-body[mobile] .side{
-    grid-column:1/2;
-}
 
-body[mobile] .main{
-    grid-column:2/3;
-    position:relative;
-}
+
+
+
+
 
 body[mobile] .close-side, body[mobile] .open-side{
     display:initial;
 }
 
-body[mobile][side]{
-    overflow-y:hidden;
-}
 
-body[mobile][side] .root{
-    transform:translateX(0);
-}
+
+
 
 body[mobile][side] .main-transparent{
     display:initial;
 }
 
-body:has(.root-transparent[show]){
-    overflow-y:hidden;
-}
+
 
 .root-transparent[show]{
     display:initial;
 }
 
+
+
+body{
+
+    
+}
+
+
+/* home */
+.home{
+
+
+}
+
+/* about */
+.about{
+
+
+}
+
+/* education */
+.education{
+
+}
+
+/* blog */
+.blog{
+
+
+}
+
+/* contact */
+.contact{
+
+}
+/* experience */
+
+/* skills */
+
+/* main transparent */
+
+/* root transparent */
 

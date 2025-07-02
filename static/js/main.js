@@ -44,7 +44,7 @@ document.querySelector(".back").addEventListener("click",()=>{
 
 
 
-// mobile vs desktop
+// mobile
 const resize = new ResizeObserver(entries => {
     entries.forEach(entry => {
         if(document.body == entry.target){
@@ -109,16 +109,41 @@ document.querySelector(".control").addEventListener("click", e =>{
 
 
 // accordion
+let current = null
 document.querySelectorAll(".accordion-item").forEach(item => {
-    let current = null
     item.addEventListener("click", e => {
-        if(current.hasAttribute("active")) current.removeAttribute("active") 
         if(e.target == item.querySelector(".accordion-item-title")){
-            item.setAttribute("active", "")
-            current = item
+            if(current != item){
+                if(current) current.removeAttribute("active")
+                current = item
+                current.setAttribute("active", "")
+            }
         }
     })
 })
+
+
+
+// section tracker
+let active = null
+document.addEventListener("scroll", ()=>{
+    const origin = 20 // section height must be greater than this to avoid multiple selection at once
+    let section = null
+    document.querySelectorAll(".section").forEach(item => {
+        if(item.getBoundingClientRect().top - origin <= 0){
+            if(!section) section = item
+            else if(item.getBoundingClientRect().top - origin > section.getBoundingClientRect().top - origin) section = item
+        }
+    })
+    if(active != section){
+        if(active) document.querySelector('.nav[section="'+active.classList[0]+'"]').removeAttribute("active")
+        active = section
+        document.querySelector('.nav[section="'+active.classList[0]+'"]').setAttribute("active", "")
+    }
+})
+
+
+
 
 
 // contact form
