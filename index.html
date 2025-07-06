@@ -10,39 +10,40 @@
 </head>
 <body>
     <div class="root">
-        <div class="side">
-            <button class="close-side"><i class="fa-solid fa-xmark"></i></button>
+        <div class="side-content">
+            <button><i class="fa-solid fa-xmark"></i></button>
             <span>Patrick Tadie</span>
             <span>IT Support analyst</span>
-            <div>
-                <button  class="nav" section="home">Home</button>
-                <button class="nav" section="about">About</button>
-                <button class="nav" section="education">Education</button>
-                <button class="nav" section="experience">Experience</button>
-                <button class="nav" section="skills">Skills</button>
-                <button class="nav" section="blog">Blog</button>
-                <button class="nav" section="contact">Contact</button>
+            <div class="nav">
+                <a nav-item href="/home">Home</a>
+                <a nav-item href="/about">About</a>
+                <a nav-item href="/education">Education</a>
+                <a nav-item href="/experience">Experience</a>
+                <a nav-item href="/skill">Skills</a>
+                <a nav-item href="/blog">Blog</a>
+                <a nav-item href="/contact">Contact</a>
             </div>
         </div>
-        <div class="main">
-            <button class="open-side"><i class="fa-solid fa-bars"></i></button>
-            <div class="home section">
-                <div>
+
+        <div class="main-content">
+            <button><i class="fa-solid fa-bars"></i></button>
+            
+            <div class="home">
+                <div class="introduction">
                     <span>Hi !</span>
                     <span>I'm Patrick Tadie</span>
                     <span>IT Support Analyst</span>
                 </div>
-                <p>
-                    Currently, I’m building projects to sharpen my skills and exploring opportunities where I can contribute to a dynamic IT team. When I’m not working on tech, you can find me biking, gaming, or digging into tech forums.
-                </p>
-                <div>
-                    <button class="download-cv">Download CV</button>
-                    <button class="nav" section="contact">Contact Me</button>
+                <p>Currently, I’m building projects to sharpen my skills and exploring opportunities where I can contribute to a dynamic IT team. When I’m not working on tech, you can find me biking, gaming, or digging into tech forums.</p>
+                <div class="home-action">
+                    <a href="/resume.pdf" >Download CV</a>
+                    <a nav-item href="/contact">Contact Me</a>
                 </div>
             </div>
-            <div class="about section">
+
+            <div class="about">
                 <span>About</span>
-                <div>
+                <div class="about-content">
                     <p>
                         I'm an IT Support Analyst with a passion for solving technical problems and helping people get the most out of their technology. With experience in troubleshooting hardware and software issues, managing systems, and delivering responsive support, I thrive in fast-paced environments where clear communication and efficient solutions matter most.
                     </p>
@@ -54,114 +55,128 @@
                     </p>
                 </div>
             </div>
-            <div class="education section">
+
+            <div class="education">
                 <span>Education</span>
-                <div class="accordion">
-                    <div  class="accordion-item">
-                        <button class="accordion-item-title">Bachelor degree in Computing Technology</button>
-                        <p class="accordion-item-content">
-                            A multidisciplinary degree focused on the practical and theoretical aspects of computer systems, software development, networking, and IT infrastructure. Covered topics such as programming, database systems, cybersecurity, cloud computing, and system administration. Be able to design, implement, and manage modern technology solutions in real-world environments.
-                        </p>
+                <div class="education-list">
+                    <div class="education-item">
+                        <button>Bachelor degree in Computing Technology</button>
+                        <p>A multidisciplinary degree focused on the practical and theoretical aspects of computer systems, software development, networking, and IT infrastructure. Covered topics such as programming, database systems, cybersecurity, cloud computing, and system administration. Be able to design, implement, and manage modern technology solutions in real-world environments.</p>
                     </div>
-                    <div class="accordion-item">
-                        <button class="accordion-item-title">Bachelor degree in Electrical Engineering</button>
-                        <p class="accordion-item-content">
+                    <div class="education-item">
+                        <button>Bachelor degree in Electrical Engineering</button>
+                        <p>
                             A four-year degree focused on the study and application of electricity, electronics, and electromagnetism. Covered core topics such as circuit analysis, digital systems, signal processing, control systems, and power electronics. Emphasized both theoretical foundations and practical skills, including hands-on lab work and engineering problem-solving.
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="experience section">
+
+            <div class="experience">
                 <span>Experience</span>
-                <div>
-                    <div>
+                <div class="experience-list">
+                    <div class="experience-item">
                         <span>Internship</span>
                         <span>Nokia 2020-2020</span>
                     </div>
-                    <div>
+                    <div class="experience-item">
                         <span>User Support Technician</span>
                         <span>CPOS Inc 2023-Now</span>
                     </div>
                 </div>
             </div>
-            <div class="skills section">
+
+            <div class="skill">
                 <span>Skills</span>
-                <div class="carousel">
-                    <div class="slider">
-                        <div class="slide">
-                            <div>
+                <div class="slide-show">
+                    <div class="slide-indicator">
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                    </div>
+
+                    <div class="slider-wrapper">
+                        <div class="slider">
+                            <div class="slide">
                                 <span>Hardware Troubleshooting</span>
-                                <p>desktops, laptops, printers, peripherals</p>
+                                <p>Desktops, laptops, printers, peripherals</p>
                             </div>
-                            <div>
+                                
+                            <div class="slide">
                                 <span>Software Support</span>
                                 <p>Windows, macOS, Microsoft Office, browsers</p>
                             </div>
-                        </div>
-                        <div class="slide">
-                            <div>
+    
+                            <div class="slide">
                                 <span>Operating Systems</span>
                                 <p>Windows 10/11, macOS, Linux basics</p>
                             </div>
-                            <div>
+
+                            <div class="slide">
                                 <span>Active Directory</span>
-                                <p>user account management, password resets, group policy basics</p>
+                                <p>User account management, password resets, group policy basics</p>
                             </div>
-                        </div>
-                        <div class="slide">
-                            <div>
+    
+                            <div class="slide">
                                 <span>Networking Fundamentals</span>
                                 <p>IP addressing, DNS, DHCP, VPN setup</p>
                             </div>
-                            <div>
+
+                            <div class="slide">
                                 <span>Remote Support Tools</span>
                                 <p>TeamViewer, AnyDesk, Remote Desktop, Zoom</p>
                             </div>
-                        </div>
-                        <div class="slide">
-                            <div>
+
+                            <div class="slide">
                                 <span>Office 365 / Microsoft 365</span>
                                 <p>Exchange, OneDrive, Teams, Outlook</p>
                             </div>
-                            <div>
+
+                            <div class="slide">
                                 <span>Basic Scripting</span>
                                 <p>PowerShell, Bash, batch files for automation</p>
                             </div>
                         </div>
+
                     </div>
-                    <div class="indicator">
-                        <button class="indicator-led"></button>
-                        <button class="indicator-led"></button>
-                        <button class="indicator-led"></button>
-                        <button class="indicator-led"></button>
+
+                    <div class="slide-direction">
+                        <button class="prev"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="next"><i class="fa-solid fa-chevron-right"></i></button>
                     </div>
-                    <button class="prev"><i class="fa-solid fa-chevron-left"></i></button>
-                    <button class="next"><i class="fa-solid fa-chevron-right"></i></button>
+
                 </div>
             </div>
-            <div class="blog section">
+
+            <div class="blog">
                 <span>Recent Blog</span>
-                <div class="expand-box">
-                    <div class="content"></div>
-                    <button class="control">Show More</button>
+                <div class="blog-content">
+                    <div class="post-list"></div>
+                    <button>Show More</button>
                 </div>
             </div>
-            <div class="contact section">
+
+            <div class="contact">
                 <span>Contact</span>
-                <div>
-                    <div>
+                <div class="contact-content">
+                    <div class="email">
                         <i class="fa-solid fa-envelope"></i>
                         <a href="mailto:jpatricktadie@gmail.com">jpatricktadie@gmail.com</a>
                     </div>
-                    <div>
+                    <div class="phone">
                         <i class="fa-solid fa-phone"></i>
                         <a href="tel:+16475714366">+1 647-571-4366</a>
                     </div>
-                    <div>
+                    <div class="linkedin">
                         <i class="fa-brands fa-linkedin-in"></i>
                         <a href="https://linkedin.com/patrick-tadie">Linked In</a>
                     </div>
-                    <div>
+                    <div class="contact-form">
                         <input placeholder="Name" type="text">
                         <input placeholder="Email" type="text">
                         <input placeholder="Subject" type="text">
@@ -170,10 +185,12 @@
                     </div>
                 </div>
             </div>
-            <div class="main-transparent"></div>
-            <div class="root-transparent">
+
+            <div class="transparent"></div>
+
+            <div class="post-wrapper">
                 <div class="post">
-                    <button class="back"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button><i class="fa-solid fa-arrow-left"></i></button>
                     <div class="post-content"></div>
                 </div>
             </div>
