@@ -368,7 +368,7 @@ body[mobile] .main-content{
     background-image:linear-gradient(to right, var(--brunswick-green), var(--mint), var(--brunswick-green));
 
     &>span{
-        font-size:1.5rem;
+        font-size:1.2rem;
         font-weight:bold;
         opacity:0.5;
     }
