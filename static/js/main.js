@@ -86,7 +86,7 @@ document.querySelector(".transparent").addEventListener("click",()=>{
 document.querySelectorAll("a[nav-item]").forEach(item => {
     item.addEventListener("click", e =>{
         e.preventDefault()
-        const origin=20
+        const origin=19
         const top=document.querySelector("."+item.getAttribute("href").split("/")[1]).getBoundingClientRect().top - origin
         window.scrollTo({top: window.scrollY + top ,behavior: "smooth"})
         if(document.body.hasAttribute("side-open")) document.body.removeAttribute("side-open")
@@ -170,26 +170,30 @@ document.querySelector(".contact-form button").addEventListener("click", ()=>{
 
     let valid = true
 
-    if(/abc/.test(name.value)) contactInfo.name = name.value
+    if(/^[a-zA-Z]+$/.test(name.value)) contactInfo.name = name.value
     else valid=false
   
-    if(/abc/.test(email.value)) contactInfo.email = email.value
+    if(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email.value)) contactInfo.email = email.value
     else valid=false
 
-    if(/abc/.test(subject.value)) contactInfo.subject = subject.value
+    if(/.+/.test(subject.value)) contactInfo.subject = subject.value
     else valid=false;
 
-    if(/abc/.test(message.value)) contactInfo.message = message.value
+    if(/.+/.test(message.value)) contactInfo.message = message.value
     else valid=false
-    
+
 
     if(valid){
 
-        // message
+        // emailjs.init({publicKey:"nlz3xBC9CC3G6mnaj"})
 
-        window.alert("message sent")
+        // emailjs.send("service_vy77mbn", "template_t6gqhk9", contactInfo)
+        // .then(res => {
+            window.alert("message sent")
+        // }, err => {
+        //     window.alert("error occured, please try again")
+        // })
     }
-
     else window.alert("form invalid")
 
 })
@@ -203,7 +207,7 @@ document.querySelector(".contact-form button").addEventListener("click", ()=>{
 //   message: 'Hello from JavaScript!'
 // })
 
-// emailjs.init("YOUR_USER_ID")
+// 
 
 
 

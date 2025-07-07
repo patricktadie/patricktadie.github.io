@@ -55,7 +55,7 @@ body[mobile][side-open]{
 
 body[mobile] .root{
     width:calc(100% + 250px);
-    grid-template-columns:250px calc(100% - 250px);
+    grid-template-columns:250px minmax(300px, calc(100% - 250px));
     transform:translateX(-250px);
 }
 
@@ -89,7 +89,7 @@ body[mobile][side-open] .root{
 
     &>span:first-of-type{
         align-self:center;
-        font-size:2rem;
+        font-size:1.5rem;
         font-weight:bold;
         opacity:0.5;
     }
@@ -146,8 +146,8 @@ body[mobile] .side-content{
         background-color:transparent;
         border-width:0;
         font-size:1.5rem;
-        /* position:sticky; */
-        /* top:20px; */
+        position:sticky;
+        top:20px;
         color:var(--mint);
         /* z-index:10; */
     }
@@ -187,6 +187,7 @@ body[mobile] .main-content{
     flex-direction:column;
     gap:10px;
     color:var(--mint);
+    z-index:-1;
 
     &>span{
         font-weight:bold;
@@ -312,7 +313,7 @@ body[mobile] .main-content{
     padding:20px;
 
     &> :first-child{
-        font-size:1.8rem;
+        font-size:1.2rem;
         font-weight:bold;
         opacity:0.5;
         color:var(--mint);
@@ -354,6 +355,7 @@ body[mobile] .main-content{
 /* slider wrapper */
 .slider-wrapper{
     height:100px;
+    z-index:-1;
 }
 
 
@@ -595,7 +597,9 @@ body[mobile][side-open] .transparent{
     flex-direction:column;
     gap:20px;
     padding:20px;
+    box-sizing:border-box;
     background-color:var(--myrtle-green);
+    overflow-y:auto;
 
     &>button{
         font-size:1.5rem;
@@ -604,14 +608,45 @@ body[mobile][side-open] .transparent{
         color:var(--mint);
         cursor:pointer;
         align-self:start;
+        position:sticky;
+        top:0;
     }
 }
 
 /* post content */
 .post-content{
 
-    &>p{
-        color:rgba(0,0,0,0.5);
+    color:rgba(0,0,0,0.6);
+
+    p{
+        color:rgba(0,0,0,0.6);
+        margin-bottom:10px;
+    }
+
+    h1{
+        font-size:1.2rem;
+        margin-bottom:10px;
+        color:var(--mint);
+    }
+
+    h2{
+        font-size:1rem;
+        margin-bottom:10px;
+        color:var(--mint);
+    }
+
+    li{
+        line-height:1.6;
+    }
+
+    ul, ol{
+        margin-bottom:10px;
+        /* list-style-position: inside; */
+        margin-left:20px;
+    }
+
+    li::marker{
+        color:var(--mint);
     }
 
 }
