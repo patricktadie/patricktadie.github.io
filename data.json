@@ -3,50 +3,46 @@
 {
     "templateDescription":[
         {
-            "title":"",
-            "content":""
+            "title":"Clean & Semantic Code",
+            "content":"Follows HTML5 best practices for structure and readability."
         },
         {
-            "title":"",
-            "content":""
+            "title":"Accessible for Everyone",
+            "content":"Screen reader friendly, keyboard navigable, and WCAG compliant."
         },
         {
-            "title":"",
-            "content":""
+            "title":"Fully Responsive",
+            "content":"Mobile-first design that adapts to all devices and screen sizes."
         },
         {
-            "title":"",
-            "content":""
+            "title":"Optimized for Performance",
+            "content":"Fast loading with lightweight, well-organized assets."
         },
         {
-            "title":"",
-            "content":""
+            "title":"SEO-Ready",
+            "content":"Proper meta tags, heading structure, and Open Graph integration."
         }
     ],
 
     "templateList":[
         {
-            "slug":"",
-            "title":"",
-            "img":""
+            "slug":"iodev",
+            "img":"https://i.ibb.co/sv20dyxL/thisisengineering-w-z-E6qlk-QKA-unsplash.jpg"
         },
 
         {
-            "slug":"",
-            "title":"",
-            "img":""
+            "slug":"lucid",
+            "img":"https://i.ibb.co/sv20dyxL/thisisengineering-w-z-E6qlk-QKA-unsplash.jpgv"
         },
 
         {
-            "slug":"",
-            "title":"",
-            "img":""
+            "slug":"emilys",
+            "img":"https://i.ibb.co/sv20dyxL/thisisengineering-w-z-E6qlk-QKA-unsplash.jpg"
         },
 
         {
-            "slug":"",
-            "title":"",
-            "img":""
+            "slug":"hashtech",
+            "img":"https://i.ibb.co/sv20dyxL/thisisengineering-w-z-E6qlk-QKA-unsplash.jpg"
         }
     ]
 }
