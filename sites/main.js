@@ -2,11 +2,13 @@
 
 
 
+
+
 let currentPath = "/"
 
 history.replaceState({path:currentPath}, "", currentPath)
 
-templates.renderRoot(currentPath)
+siteTemplates.renderRoot(currentPath)
 
 
 document.body.addEventListener("click", e => {
@@ -21,7 +23,7 @@ document.body.addEventListener("click", e => {
 
             history.pushState({path:currentPath}, "", currentPath)
 
-            templates.renderRoot(currentPath)
+            siteTemplates.renderRoot(currentPath)
         }
     }
 })
@@ -31,7 +33,7 @@ window.addEventListener("popstate", e => {
 
     currentPath = e.state.path
 
-    templates.renderRoot(e.state.path)
+    siteTemplates.renderRoot(e.state.path)
 
 })
 

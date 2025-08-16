@@ -78,16 +78,16 @@ const templates = {
     
     
     
-    // root templates
-    home(data){
-        return `
+    // inner root templates
+    home(){
+        return fetch("/data.json").then(res => res.json()).then(data => `
             ${this.header()}
             <main>
                 ${this.templateDescription(data.templateDescription)}
                 ${this.templateList(data.templateList)}
             </main>
             ${this.footer()}    
-        `
+        `) 
     },
     
     preview(slug){
@@ -95,7 +95,7 @@ const templates = {
             ${this.header()}
             <main>
                 ${this.contolPanel(slug)}
-                ${this.siteView()}
+                ${this.siteView(slug)}
             </main>
             ${this.footer()}
         `
@@ -103,30 +103,50 @@ const templates = {
     
     
     
-    // rendered html
-    html(path){
-        const pathPart1 = path.split("/")[1] || "home"
-        const pathPart2 = path.split("/")[2]
-        if(pathPart1 == "home") return fetch("/data.json").then(res => res.json()).then(data => this.home(data))
-        else return new Promise((resolve, reject) => {
-            resolve(this.preview(pathPart2))
-        })
+    // render
+    renderRoot(path){
+        const split1 = path.split("/")[1] || "home"
+        const split2 = path.split("/")[2]
+        if(split1 == "home"){
+            this.home().then(res => {
+
+                document.title = "Home"
+                
+                document.querySelector("#root").innerHTML = res
+                
+                const script = document.createElement("script")
+                script.id = "script"
+                script.src = "/static/js/home.js"
+                
+                const style = document.createElement("link")
+                style.id = "style"
+                style.rel = "stylesheet"
+                style.href = "/static/css/home.css"
+
+                document.querySelector("#script").replaceWith(script)
+                document.querySelector("#style").replaceWith(style)
+
+            })
+        }
+        else if(split1 == "preview"){
+
+            document.title = split2.charAt(0).toUpperCase() + split2.slice(1)
+
+            document.querySelector("#root").innerHTML = this.preview(split2)
+
+            const script = document.createElement("script")
+            script.id = "script"
+            script.src = "/static/js/preview.js"
+            
+            const style = document.createElement("link")
+            style.id = "style"
+            style.rel = "stylesheet"
+            style.href = "/static/css/preview.css"
+
+            document.querySelector("#script").replaceWith(script)
+            document.querySelector("#style").replaceWith(style)
+        }
     },
-
-
-
-    // update static files
-    static(path){
-        const pathPart1 = path.split("/")[1] || "home"
-        if(pathPart1 == "home") return {
-            script:"/static/js/home.js",
-            style:"/static/css/home.css"
-        }
-        else return{
-            script:"/static/js/preview.js",
-            style:"/static/css/preview.css"
-        }
-    } 
 
 }
 

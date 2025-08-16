@@ -1,0 +1,36 @@
+
+
+{
+
+    "testimonials":[
+        {
+
+        },
+
+        {
+
+        }
+    ],
+
+    "services":[
+        {
+            "title":"Tailor Sweing",
+            "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+        },
+        {
+            "title":"Tailor Sweing",
+            "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+        },
+        {
+            "title":"Tailor Sweing",
+            "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+        },
+        {
+            "title":"Tailor Sweing",
+            "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+        }
+    ]
+
+}
+
+

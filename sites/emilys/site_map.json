@@ -1,1 +1,39 @@
 
+
+
+[
+    {
+        "path":"/index.html",
+        "type":"template"
+    },
+
+    {
+        "path":"/static/js/home.js",
+        "type":"static"
+    },
+
+    {
+        "path":"/static/js/util.js",
+        "type":"static"
+    },
+
+    {
+        "path":"/static/css/util.css",
+        "type":"static"
+    },
+
+    {
+        "path":"/static/css/home.css",
+        "type":"static"
+    },
+
+    {
+        "path":"/readme.txt",
+        "type":"static"
+    }
+
+   
+]
+
+
+
