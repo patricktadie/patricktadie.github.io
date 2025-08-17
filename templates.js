@@ -1,159 +1,76 @@
 
 
 
-const templates = {
+// template parts
+function header(){
+    return `
+        <header><a href="index.html"><h1>Free Html Templates</h1></a></header>
+    `
+}
     
-    
-    // template parts
-    header(){
-        return `
-            <header><h1><a href="/">Free Html Templates</a></h1></header>
-        `
-    },
-      
-    footer(){
-        return `
-            <footer><h5><a href="/">Devspot</a></h5></footer>
-        `
-    },
-    
-    siteView(slug){
-        return `
-            <section class="site-view">
-                <iframe src="/sites/${slug}"></iframe>
-            </section>
-        `
-    },
-    
-    contolPanel(slug){
-        return `
-            <section class="control-panel">
-                <div>
-                    <h2>${slug}</h2>
-                    <div>
-                        <button class="control desktop">Desktop</button>
-                        <button class="control mobile">Mobile</button>
-                        <button class="download" slug="${slug}">Download</button>
-                        <button class="live" slug="${slug}">Live</button>
-                    </div>
-                </div>
-            </section>
-        `
-    },
-    
-    templateList(list){
-        return `
-            <section class="template-list">
-                <h2>Our Recent Templates</h2>
-                <ul>
-                    ${list.map(item => `
-                        <li>
-                            <div>
-                                <a href="/preview/${item.slug}"></a>
-                                <img src="${item.img}">
-                            </div>
-                            <h3><a href="/preview/${item.slug}">${item.slug}</a></h3>
-                        </li>
-                    `).join(" ")}
-                </ul>
-            </section>
-        `
-    },
-    
-    templateDescription(list){
-        return `
-            <section class="template-description">
-                <h2>Why Our HTML Templates Stands Out</h2>
-                <ul>
-                    ${list.map(item => `
-                        <li>
-                            <h3>${item.title}</h3>
-                            <p>${item.content}</p>
-                        </li>
-                    `).join(" ")}
-                </ul>
-            </section>
-        `
-    },
-    
-    
-    
-    // inner root templates
-    home(){
-        return fetch("/data.json").then(res => res.json()).then(data => `
-            ${this.header()}
-            <main>
-                ${this.templateDescription(data.templateDescription)}
-                ${this.templateList(data.templateList)}
-            </main>
-            ${this.footer()}    
-        `) 
-    },
-    
-    preview(slug){
-        return `
-            ${this.header()}
-            <main>
-                ${this.contolPanel(slug)}
-                ${this.siteView(slug)}
-            </main>
-            ${this.footer()}
-        `
-    },
-    
-    
-    
-    // render
-    renderRoot(path){
-        const split1 = path.split("/")[1] || "home"
-        const split2 = path.split("/")[2]
-        if(split1 == "home"){
-            this.home().then(res => {
+function footer(){
+    return `
+        <footer><a href="index.html"><small>Devspot</small></a></footer>
+    `
+}
 
-                document.title = "Home"
-                
-                document.querySelector("#root").innerHTML = res
-                
-                const script = document.createElement("script")
-                script.id = "script"
-                script.src = "/static/js/home.js"
-                
-                const style = document.createElement("link")
-                style.id = "style"
-                style.rel = "stylesheet"
-                style.href = "/static/css/home.css"
+function sites(sites){
+    return `
+        <section class="sites">
+            <h2>Our Recent Templates</h2>
+            <ul>
+                ${sites.map(site => `
+                    <li>
+                        <div>
+                            <img src="${site.img}">
+                            <a href="sites/${site.slug}/index.html" target="_blank"><span>View</span></a>
+                        </div>
+                        <a href="download/${site.slug}" class="download">${site.slug}</a>
+                    </li>
+                `).join(" ")}
+            </ul>
+        </section>
+    `
+}
 
-                document.querySelector("#script").replaceWith(script)
-                document.querySelector("#style").replaceWith(style)
-
-            })
-        }
-        else if(split1 == "preview"){
-
-            document.title = split2.charAt(0).toUpperCase() + split2.slice(1)
-
-            document.querySelector("#root").innerHTML = this.preview(split2)
-
-            const script = document.createElement("script")
-            script.id = "script"
-            script.src = "/static/js/preview.js"
-            
-            const style = document.createElement("link")
-            style.id = "style"
-            style.rel = "stylesheet"
-            style.href = "/static/css/preview.css"
-
-            document.querySelector("#script").replaceWith(script)
-            document.querySelector("#style").replaceWith(style)
-        }
-    },
-
+function desc(desc){
+    return `
+        <section class="desc">
+            <h2>Why Our HTML Templates Stands Out</h2>
+            <ul>
+                ${desc.map(item => `
+                    <li>
+                        <h3>${item.title}</h3>
+                        <p>${item.content}</p>
+                    </li>
+                `).join(" ")}
+            </ul>
+        </section>
+    `
 }
 
 
 
+// inner root templates
+function home(data){
+    return `
+        ${header()}
+        <main>
+            ${desc(data.desc)}
+            ${sites(data.sites)}
+        </main>
+        ${footer()}    
+    `
+}
 
- 
+
+
+// export templates
+export const templates = {
+    "index.html":home
+}
+
+
 
 
 

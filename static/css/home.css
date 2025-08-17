@@ -1,8 +1,48 @@
 
 
+@import url("./util.css");
 
 
-.template-list{
+
+header{
+    grid-column:1/-1;
+    display:grid;
+    grid-template-columns:subgrid;
+    background-color:var(--french-gray-2);
+
+    a{
+        grid-column:2/3;
+        place-self:center start;
+        opacity:0.5;
+    }
+}
+
+
+
+main{
+    grid-column:1/-1;
+    grid-template-columns:subgrid;
+    display:grid;
+    background-color:var(--light-cyan);
+}
+
+
+
+footer{
+    grid-column:1/-1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:var(--french-gray-2);
+
+    a{
+        opacity:0.6;
+    }
+}
+
+
+
+.sites{
     grid-column:2/3;
     display:flex;
     flex-direction:column;
@@ -39,6 +79,15 @@
                 border-radius:5px;
                 overflow:hidden;
 
+                &:hover{
+                    
+                    a{
+                        display:flex;
+                        background-color:rgba(0,0,0,0.7);
+                    }
+
+                }
+
                 img{
                     position:absolute;
                     top:0;
@@ -55,23 +104,29 @@
                     width:100%;
                     height:100%;
                     z-index:1;
+                    display:none;
+                    justify-content:center;
+                    align-items:center;
+
+                    span{
+                        background-color:var(--french-gray-2);
+                        padding:10px;
+                        border-radius:5px;
+                        color:rgba(0,0,0,0.5);
+                    }
                 }
             }
 
-            h3{
+            &>a{
                 opacity:0.5;
                 background-color:var(--french-gray-2);
-                text-transform:capitalize;
                 padding:10px;
                 border-radius:5px;
+                border-width:0;
                 display:flex;
                 justify-content:center;
-                align-items:center;
-
-                a{
-                    flex-grow:1;
-                    text-align:center;
-                }
+                cursor:pointer;
+                text-transform:capitalize;
             }
         }
     }
@@ -79,7 +134,8 @@
 }
 
 
-.template-description{
+
+.desc{
     grid-column:2/3;
     display:flex;
     flex-direction:column;
@@ -120,6 +176,6 @@
             }
         }
     }
-
 }
+
 

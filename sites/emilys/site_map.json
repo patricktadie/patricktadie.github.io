@@ -1,39 +1,30 @@
 
 
-
 [
     {
-        "path":"/index.html",
+        "route":"index.html",
         "type":"template"
     },
 
     {
-        "path":"/static/js/home.js",
-        "type":"static"
+        "route":"static/js/home.js",
+        "type":"file"
     },
 
     {
-        "path":"/static/js/util.js",
-        "type":"static"
+        "route":"static/css/home.css",
+        "type":"file"
     },
 
     {
-        "path":"/static/css/util.css",
-        "type":"static"
+        "route":"static/css/util.css",
+        "type":"file"
     },
 
     {
-        "path":"/static/css/home.css",
-        "type":"static"
-    },
-
-    {
-        "path":"/readme.txt",
-        "type":"static"
+        "route":"readme.txt",
+        "type":"file"
     }
 
-   
 ]
-
-
 

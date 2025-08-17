@@ -1,8 +1,14 @@
 
 
+
+:root{
+
+
+}
+
 *{
-    margin:0;
     padding:0;
+    margin:0;
 }
 
 a{
@@ -10,5 +16,12 @@ a{
     color:inherit;
 }
 
+li{
+    list-style-type:none;
+}
 
+#root{
+
+    
+}
 
