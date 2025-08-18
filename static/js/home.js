@@ -16,12 +16,12 @@ const ob = new IntersectionObserver((entries, observer) =>{
     threshold:0.7
 })
 
-document.querySelectorAll(".desc li").forEach(item =>{
+document.querySelectorAll(".desc-item").forEach(item =>{
 
     ob.observe(item)
 })
 
-document.querySelectorAll(".sites li").forEach(item =>{
+document.querySelectorAll(".site-item").forEach(item =>{
 
     ob.observe(item)
 })
@@ -34,9 +34,7 @@ download.forEach(item => {
 
     item.addEventListener("click", async (e) => {
     
-        e.preventDefault()
-    
-        const slug = e.target.pathname.split("/")[2]
+        const slug = e.target.getAttribute("slug")
        
         const pageTemplates = await import("/sites/"+slug+"/templates.js").then(mod => mod.pageTemplates)
     

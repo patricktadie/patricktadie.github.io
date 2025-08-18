@@ -4,113 +4,138 @@
 // template parts
 function header(){
     return `
-        <header>
+        <div class="header">
             <div>
-                <h1><a href="index.html">Emilys</a></h1>
+                <a href="index.html">Emilys</a>
                 <div>
                     <button>Menu</button>
-                    <ul>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Services</li>
-                        <li>Contact</li>
-                    </ul>
+                    <div>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
                 </div>
             </div>
-        </header>
+        </div>
     `
 }
 
-function hero(){
+function hero(page){
     return `
-        <section class="hero">
+        <div class="hero">
             <div>
                 <div>
-                    <h1>At Emilys, we make cloths that suit you</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat, mi et sollicitudin auctor, nisi ante accumsan nibh, eu hendrerit dolor mi ut quam. Sed nunc augue, malesuada ac nisl a, porttitor blandit libero.</p>
-                    <button>Our Services</button>
+                    ${
+                        page == "home" ? `
+                            <span>At Emilys, we make cloths that suit you</span>
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat, mi et sollicitudin auctor, nisi ante accumsan nibh, eu hendrerit dolor mi ut quam. Sed nunc augue, malesuada ac nisl a, porttitor blandit libero.</span>
+                            <a href="#service">Our Services</a>
+                        `
+                        : page == "about" ? `<span>About</span>` : `<span>Contact</span>`
+                    }
                 </div>
                 <div>
                     <img src="">
                 </div>
             </div>
-        </section>
+        </div>
     `
 }
 
 function service(services){
     return `
-        <section class="service">
+        <div id="service" class="service">
             <div>
-                <h1>Our Services</h1>
-                <p>Phasellus fermentum tellus nec dolor suscipit, vitae blandit tellus finibus. Proin et velit leo. Vestibulum iaculis felis non nisi consequat, vel facilisis lacus ultrices.</p>
+                <span>Our Services</span>
+                <span>Phasellus fermentum tellus nec dolor suscipit, vitae blandit tellus finibus. Proin et velit leo. Vestibulum iaculis felis non nisi consequat, vel facilisis lacus ultrices.</span>
             </div>
             <div>
-                <ul>
+                <div>
                     ${
                         services.map(service => `
-                            <li>
-                                <h3>${service.title}</h3>
-                                <p>${service.content}</p>
-                            </li>
+                            <div>
+                                <span>${service.title}</span>
+                                <span>${service.content}</span>
+                            </div>
                         `).join(" ")
                     }
-                </ul>
+                </div>
             </div>
-        </section>
+        </div>
     `
 }
 
-function testimonial(testimoials){
+function testimonial(testimonials){
     return `
-        <section class="testimonial"></section>
+        <div class="testimonial"></div>
     `
 }
 
-function contact(){
+function contactSection(){
     return `
-        <section class="about">
+        <div class="contact">
             <div>
-                <h1>Get In Touch</h1>
+                <span>Get In Touch</span>
                 <div>
                     <textarea placeholder="Message"></textarea>
                     <input type="text" placeholder="Name">
                     <input type="text" placeholder="Email">
                     <input type="text" placeholder="Subject">
                     <button>Send</button>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
+                    <div>
+                        <span>Mountain Road, Soul City</span>
+                        <span>+123-323-2342</span>
+                        <span>info@emilys.com</span>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
     `
 }
 
-function about(){
+function aboutSection(){
     return `
-        <section class="about">
+        <div class="about">
             <div>
                 <div>
                     <img src="">
                     <img src="">
                 </div>
                 <div>
-                    <h1>About Our Tailor</h1>
-                    <h3>Duis pulvinar fringilla aliquet. Aenean nec lectus mollis, vestibulum ante nec, venenatis nunc. Proin ullamcorper quam ante, eu tempor lectus semper nec</h3>
-                    <p>Quisque sed mauris feugiat, porta purus sit amet, suscipit enim. Sed in interdum velit, quis eleifend magna. Quisque hendrerit magna eu gravida tempor.</p>
-                    <button>More About Us</button>
+                    <span>About Our Tailor</span>
+                    <span>Duis pulvinar fringilla aliquet. Aenean nec lectus mollis, vestibulum ante nec, venenatis nunc. Proin ullamcorper quam ante, eu tempor lectus semper nec</span>
+                    <span>Quisque sed mauris feugiat, porta purus sit amet, suscipit enim. Sed in interdum velit, quis eleifend magna. Quisque hendrerit magna eu gravida tempor.</span>
+                    <a href="#">More About Us</a>
                 </div>
             </div>
-        </section>
+        </div>
     `
 }
 
 function footer(){
     return `
-        <footer></footer>
+        <div class="footer">
+            <img src="">
+            <div></div>
+            <div>
+                <div>
+                    <span>Media</span>
+                    <div>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                    </div>
+                </div>
+                <div>
+                    <span>Link</span>
+                    <div>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="contact.html">Contact</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
     `
 }
 
@@ -120,13 +145,33 @@ function footer(){
 function home(data){
     return `
         ${header()}
-        <main>
-            ${hero()}
+        <div class="main">
+            ${hero("home")}
             ${service(data.services)}
-            ${about()}
             ${testimonial(data.testimonials)}
-            ${contact()}
-        </main>
+        </div>
+        ${footer()}
+    `
+}
+
+function about(){
+    return `
+        ${header()}
+        <div class="main">
+            ${hero("about")}
+            ${aboutSection()}
+        </div>
+        ${footer()}
+    `
+}
+
+function contact(){
+    return `
+        ${header()}
+        <div class="main">
+            ${hero("contact")}
+            ${contactSection()}
+        </div>
         ${footer()}
     `
 }
@@ -142,7 +187,7 @@ function homePage(data){
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <link rel="stylesheet" href="static/css/home.css">
-                <title>Emilys</title>
+                <title>Home</title>
             </head>
             <body>
                 <div id="root">
@@ -154,15 +199,58 @@ function homePage(data){
     `
 }
 
+function aboutPage(){
+    return `
+        <!DOCTYPE>
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link rel="stylesheet" href="static/css/about.css">
+                <title>About</title>
+            </head>
+            <body>
+                <div id="root">
+                    ${about()}
+                </div>
+                <script type="module" src="static/js/about.js"></script>
+            </body>
+        </html>
+    `
+}
+
+function contactPage(){
+    return `
+        <!DOCTYPE>
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link rel="stylesheet" href="static/css/contact.css">
+                <title>Contact</title>
+            </head>
+            <body>
+                <div id="root">
+                    ${contact()}
+                </div>
+                <script type="module" src="static/js/contact.js"></script>
+            </body>
+        </html>
+    `
+}
 
 
 // export templates
 export const rootTemplates = {
-    "index.html":home
+    "index.html":home,
+    "about.html":about,
+    "contact.html":contact
 }
 
 export const pageTemplates = {
-    "index.html":homePage
+    "index.html":homePage,
+    "about.html":aboutPage,
+    "contact.html":contactPage
 }
 
 

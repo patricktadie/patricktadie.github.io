@@ -4,48 +4,48 @@
 // template parts
 function header(){
     return `
-        <header><a href="index.html"><h1>Free Html Templates</h1></a></header>
+        <div class="header"><a href="index.html">Free Html Templates</a></div>
     `
 }
     
 function footer(){
     return `
-        <footer><a href="index.html"><small>Devspot</small></a></footer>
+        <div class="footer"><a href="index.html">Devspot</a></div>
     `
 }
 
 function sites(sites){
     return `
-        <section class="sites">
-            <h2>Our Recent Templates</h2>
-            <ul>
+        <div class="sites">
+            <span>Our Recent Templates</span>
+            <div>
                 ${sites.map(site => `
-                    <li>
+                    <div class="site-item">
                         <div>
                             <img src="${site.img}">
                             <a href="sites/${site.slug}/index.html" target="_blank"><span>View</span></a>
                         </div>
-                        <a href="download/${site.slug}" class="download">${site.slug}</a>
-                    </li>
+                        <button slug="${site.slug}" class="download">${site.slug}</button>
+                    </div>
                 `).join(" ")}
-            </ul>
-        </section>
+            </div>
+        </div>
     `
 }
 
 function desc(desc){
     return `
-        <section class="desc">
-            <h2>Why Our HTML Templates Stands Out</h2>
-            <ul>
+        <div class="desc">
+            <span>Why Our HTML Templates Stands Out</span>
+            <div>
                 ${desc.map(item => `
-                    <li>
-                        <h3>${item.title}</h3>
-                        <p>${item.content}</p>
-                    </li>
+                    <div class="desc-item">
+                        <span>${item.title}</span>
+                        <span>${item.content}</span>
+                    </div>
                 `).join(" ")}
-            </ul>
-        </section>
+            </div>
+        </div>
     `
 }
 
@@ -55,10 +55,10 @@ function desc(desc){
 function home(data){
     return `
         ${header()}
-        <main>
+        <div class="main">
             ${desc(data.desc)}
             ${sites(data.sites)}
-        </main>
+        </div>
         ${footer()}    
     `
 }
