@@ -8,8 +8,8 @@ function header(){
             <div>
                 <a href="index.html">Emilys</a>
                 <div>
-                    <button>Menu</button>
-                    <div>
+                    <button class="nav-control">Menu</button>
+                    <div class="nav">
                         <a href="index.html">Home</a>
                         <a href="about.html">About</a>
                         <a href="contact.html">Contact</a>
@@ -35,7 +35,7 @@ function hero(page){
                     }
                 </div>
                 <div>
-                    <img src="">
+                    <img src="https://i.ibb.co/N6zkLxPy/yasamine-june-t-Oubjw-KS6f0-unsplash.jpg">
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@ function service(services){
     return `
         <div id="service" class="service">
             <div>
-                <span>Our Services</span>
+                <span>Why use our service?</span>
                 <span>Phasellus fermentum tellus nec dolor suscipit, vitae blandit tellus finibus. Proin et velit leo. Vestibulum iaculis felis non nisi consequat, vel facilisis lacus ultrices.</span>
             </div>
             <div>
@@ -67,7 +67,34 @@ function service(services){
 
 function testimonial(testimonials){
     return `
-        <div class="testimonial"></div>
+        <div class="testimonial">
+            <div class="slide-show">
+                <div class="slider-wrapper">
+                    <div class="slider">
+                        ${
+                            testimonials.map(testimonial => `
+                                <div class="slide">
+                                    <span>
+                                        <i class="fa-solid fa-quote-left"></i>
+                                        ${testimonial.content}
+                                    </span>
+                                    <div>
+                                        <div>
+                                            <img src="${testimonial.img}">
+                                        </div>
+                                        <span>${testimonial.name}</span>
+                                    </div>
+                                </div>
+                            `).join(" ")
+                        }
+                    </div>
+                </div>
+                <div class="slider-control">
+                    <button class="previous"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
     `
 }
 
@@ -115,19 +142,19 @@ function aboutSection(){
 function footer(){
     return `
         <div class="footer">
-            <img src="">
+            <img src="https://i.ibb.co/DDJjvTMj/salvador-godoy-ks-LWYYm-K-0k-unsplash.jpg">
             <div></div>
             <div>
                 <div>
-                    <span>Media</span>
+                    <span>Social</span>
                     <div>
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
                     </div>
                 </div>
                 <div>
-                    <span>Link</span>
+                    <span>Navigation</span>
                     <div>
                         <a href="index.html">Home</a>
                         <a href="about.html">About</a>

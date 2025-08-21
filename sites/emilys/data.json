@@ -6,11 +6,24 @@
 
     "testimonials":[
         {
-
+            "name":"Sarah Conor",
+            "img":"https://i.ibb.co/QF96dGfR/hassan-khan-EGVcceb-Wod-M-unsplash.jpg",
+            "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dapibus ex in tortor lacinia, sit amet porttitor quam tempor. Curabitur tempor maximus tortor, sit amet malesuada metus ultricies vel. In eu tempor diam.0"
         },
-
         {
-
+            "name":"Sarah Conor",
+            "img":"https://i.ibb.co/QF96dGfR/hassan-khan-EGVcceb-Wod-M-unsplash.jpg",
+            "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dapibus ex in tortor lacinia, sit amet porttitor quam tempor. Curabitur tempor maximus tortor, sit amet malesuada metus ultricies vel. In eu tempor diam.1"
+        },
+        {
+            "name":"Sarah Conor",
+            "img":"https://i.ibb.co/QF96dGfR/hassan-khan-EGVcceb-Wod-M-unsplash.jpg",
+            "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dapibus ex in tortor lacinia, sit amet porttitor quam tempor. Curabitur tempor maximus tortor, sit amet malesuada metus ultricies vel. In eu tempor diam.2"
+        },
+        {
+            "name":"Sarah Conor",
+            "img":"https://i.ibb.co/QF96dGfR/hassan-khan-EGVcceb-Wod-M-unsplash.jpg",
+            "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dapibus ex in tortor lacinia, sit amet porttitor quam tempor. Curabitur tempor maximus tortor, sit amet malesuada metus ultricies vel. In eu tempor diam.3"
         }
     ],
 
