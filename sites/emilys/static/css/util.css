@@ -38,6 +38,9 @@ li{
     grid-template-columns:subgrid;
     background-color:var(--black-bean);
     color:white;
+    position:sticky;
+    top:0;
+    z-index:1;
 
     &>div{
         display:flex;
@@ -129,7 +132,7 @@ li{
                 flex-direction:column;
                 max-height:0;
                 overflow:hidden;
-                transition:max-height 1s;
+                transition:max-height 0.5s;
                 background-color:var(--auburn);
 
                 &[open]{
@@ -243,6 +246,7 @@ li{
 }
 
 #root[size="medium"] .footer, #root[size="small"] .footer{
+    padding-block:40px;
 
     &>div:last-child{
         grid-template-columns:auto;
@@ -255,7 +259,8 @@ li{
     grid-column:1/-1;
     display:grid;
     grid-template-columns:subgrid;
-    background-image:linear-gradient(to right, white, var(--auburn))
+    background-image:linear-gradient(to right, white, var(--auburn));
+    min-height:300px;
 }
 
 #root[size="large"] .hero{

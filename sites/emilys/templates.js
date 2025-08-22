@@ -104,11 +104,13 @@ function contactSection(){
             <div>
                 <span>Get In Touch</span>
                 <div>
-                    <textarea placeholder="Message"></textarea>
-                    <input type="text" placeholder="Name">
-                    <input type="text" placeholder="Email">
-                    <input type="text" placeholder="Subject">
-                    <button>Send</button>
+                    <div>
+                        <textarea placeholder="Message"></textarea>
+                        <input type="text" placeholder="Name">
+                        <input type="text" placeholder="Email">
+                        <input type="text" placeholder="Subject">
+                        <button>Send</button>
+                    </div>
                     <div>
                         <span>Mountain Road, Soul City</span>
                         <span>+123-323-2342</span>
@@ -125,8 +127,7 @@ function aboutSection(){
         <div class="about">
             <div>
                 <div>
-                    <img src="">
-                    <img src="">
+                    <img src="https://i.ibb.co/20v8smh8/emmanuel-boldo-u3-Cm8y-J0-Hj-E-unsplash.jpg">
                 </div>
                 <div>
                     <span>About Our Tailor</span>
@@ -159,7 +160,7 @@ function footer(){
                         <a href="index.html">Home</a>
                         <a href="about.html">About</a>
                         <a href="contact.html">Contact</a>
-                    </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -213,6 +214,8 @@ function homePage(data){
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta name="description" content="we make cloths that suit our customers">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
                 <link rel="stylesheet" href="static/css/home.css">
                 <title>Home</title>
             </head>
@@ -233,6 +236,8 @@ function aboutPage(){
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta name="description" content="we make cloths that suit our customers">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
                 <link rel="stylesheet" href="static/css/about.css">
                 <title>About</title>
             </head>
@@ -253,6 +258,8 @@ function contactPage(){
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta name="description" content="we make cloths that suit our customers">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
                 <link rel="stylesheet" href="static/css/contact.css">
                 <title>Contact</title>
             </head>

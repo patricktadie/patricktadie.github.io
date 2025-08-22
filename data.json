@@ -27,6 +27,11 @@
 
     "sites":[
         {
+            "slug":"estatehub",
+            "img":"https://i.ibb.co/sv20dyxL/thisisengineering-w-z-E6qlk-QKA-unsplash.jpg"
+        },
+
+        {
             "slug":"iodev",
             "img":"https://i.ibb.co/sv20dyxL/thisisengineering-w-z-E6qlk-QKA-unsplash.jpg"
         },
@@ -38,7 +43,7 @@
 
         {
             "slug":"emilys",
-            "img":"https://i.ibb.co/sv20dyxL/thisisengineering-w-z-E6qlk-QKA-unsplash.jpg"
+            "img":"https://i.ibb.co/HL91N6GV/emilys.png"
         },
 
         {

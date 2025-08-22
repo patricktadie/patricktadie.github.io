@@ -17,7 +17,7 @@ export function rootResize(){
 
                     entry.target.setAttribute("size", "large")
             }
-            else if(entry.target.offserWidth > 500 && entry.target.offsetWidth < 800 ){
+            else if(entry.target.offsetWidth > 500 && entry.target.offsetWidth < 800 ){
 
                 if(entry.target.getAttribute("size")!="medium")
 
@@ -47,6 +47,14 @@ export function navEvent(){
         if(nav.hasAttribute("open")) nav.removeAttribute("open")
         
         else nav.setAttribute("open", "")
+    })
+
+    window.addEventListener("click", e => {
+
+        if(e.target != navControl){
+
+            if(nav.hasAttribute("open")) nav.removeAttribute("open")
+        }
     })
 }
 

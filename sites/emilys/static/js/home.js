@@ -1,6 +1,6 @@
 
 
-if (window.pageReady) await window.pageReady
+if (window.render) await window.render.pageReady()
 
 import { rootResize, navEvent, slideShow } from "./util.js"
 

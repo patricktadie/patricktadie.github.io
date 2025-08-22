@@ -1,5 +1,5 @@
 
-if(window.pageReady) await window.pageReady
+if(window.render) await window.render.pageReady()
 
 
 

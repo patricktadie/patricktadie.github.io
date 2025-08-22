@@ -7,6 +7,16 @@
     },
 
     {
+        "route":"about.html",
+        "type":"template"
+    },
+
+    {
+        "route":"contact.html",
+        "type":"template"
+    },
+
+    {
         "route":"static/js/home.js",
         "type":"file"
     },
@@ -17,12 +27,33 @@
     },
 
     {
+        "route":"static/css/about.css",
+        "type":"file"
+    },
+
+    {
+        "route":"static/js/about.js",
+        "type":"file"
+    },
+
+    {
+        "route":"static/css/contact.css",
+        "type":"file"
+    },
+
+    {
+        "route":"static/js/contact.js",
+        "type":"file"
+    },
+
+
+    {
         "route":"static/css/util.css",
         "type":"file"
     },
 
     {
-        "route":"readme.txt",
+        "route":"static/js/util.js",
         "type":"file"
     }
 
