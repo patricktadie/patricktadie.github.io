@@ -2,6 +2,126 @@
 
 {
 
+    "search":{
+        "rent":[
+            "rent 1",
+            "rent 2",
+            "rent 3",
+            "rent 4",
+            "rent 5"
+        ],
+
+        "bed":[
+            "bed 1",
+            "bed 2",
+            "bed 3",
+            "bed 4",
+            "bed 5"
+        ],
+
+        "bath":[
+            "bath 1",
+            "bath 2",
+            "bath 3",
+            "bath 4",
+            "bath 5"
+        ]
+
+    },
+
+
+    "properties":[
+        {
+            "img":"https://i.ibb.co/cKyr0v5N/webaliser-TPTXZd9m-Oo-unsplash.jpg",
+            "price":"$ 5423",
+            "type":"Appartment",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "img":"https://i.ibb.co/cKyr0v5N/webaliser-TPTXZd9m-Oo-unsplash.jpg",
+            "price":"$ 5423",
+            "type":"Home",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "img":"https://i.ibb.co/cKyr0v5N/webaliser-TPTXZd9m-Oo-unsplash.jpg",
+            "price":"$ 5423",
+            "type":"Office",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "img":"https://i.ibb.co/cKyr0v5N/webaliser-TPTXZd9m-Oo-unsplash.jpg",
+            "price":"$ 5423",
+            "type":"Appartment",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "img":"https://i.ibb.co/cKyr0v5N/webaliser-TPTXZd9m-Oo-unsplash.jpg",
+            "price":"$ 5423",
+            "type":"Office",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "img":"https://i.ibb.co/cKyr0v5N/webaliser-TPTXZd9m-Oo-unsplash.jpg",
+            "price":"$ 5423",
+            "type":"Appartment",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "img":"https://i.ibb.co/cKyr0v5N/webaliser-TPTXZd9m-Oo-unsplash.jpg",
+            "price":"$ 5423",
+            "type":"Home",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        }
+    ],
+
+    "agents":[
+        {
+            "img":"https://i.ibb.co/gMyvRfJ4/nora-hutton-t-CJ44-OIqce-U-unsplash.jpg",
+            "name":"Michael Jordan"
+        },
+        {
+            "img":"https://i.ibb.co/gMyvRfJ4/nora-hutton-t-CJ44-OIqce-U-unsplash.jpg",
+            "name":"Conrad Mike"
+        },
+        {
+            "img":"https://i.ibb.co/gMyvRfJ4/nora-hutton-t-CJ44-OIqce-U-unsplash.jpg",
+            "name":"Sam Tom"
+        },
+        {
+            "img":"https://i.ibb.co/gMyvRfJ4/nora-hutton-t-CJ44-OIqce-U-unsplash.jpg",
+            "name":"Michael Jordan"
+        },
+        {
+            "img":"https://i.ibb.co/gMyvRfJ4/nora-hutton-t-CJ44-OIqce-U-unsplash.jpg",
+            "name":"Corry Harpper"
+        },
+        {
+            "img":"https://i.ibb.co/gMyvRfJ4/nora-hutton-t-CJ44-OIqce-U-unsplash.jpg",
+            "name":"Mr Jay"
+        }
+    ],
+
+    "posts":[
+        {
+            "img":"https://i.ibb.co/zjcP2Pn/kenny-eliason-3-GZNPBLIm-Wc-unsplash.jpg",
+            "title":"Blog Title",
+            "preview":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "date":"Jan 23"
+        },
+        {
+            "img":"https://i.ibb.co/zjcP2Pn/kenny-eliason-3-GZNPBLIm-Wc-unsplash.jpg",
+            "title":"Blog Title",
+            "preview":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "date":"Jan 23"
+        },
+        {
+            "img":"https://i.ibb.co/zjcP2Pn/kenny-eliason-3-GZNPBLIm-Wc-unsplash.jpg",
+            "title":"Blog Title",
+            "preview":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "date":"Jan 23"
+        }
+    ]
 
 }
 
